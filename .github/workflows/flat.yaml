@@ -1,0 +1,21 @@
+name: data
+on:
+  schedule:
+    - cron: "0 0 * * * "
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/flat.yml
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denolib/setup-deno@v2
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://www.mobileconnectivityindex.com/widgets/connectivityIndex/excel/MCI_Data_2020.xlsx
+          download_filename: countries_mobile_connectivity.xlsx
