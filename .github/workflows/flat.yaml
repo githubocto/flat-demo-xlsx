@@ -19,3 +19,4 @@ jobs:
         with:
           http_url: https://www.mobileconnectivityindex.com/widgets/connectivityIndex/excel/MCI_Data_2020.xlsx
           downloaded_filename: countries_mobile_connectivity.xlsx
+          postprocess: ./postprocess.ts
