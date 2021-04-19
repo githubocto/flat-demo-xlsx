@@ -2,7 +2,7 @@ import {
   xlsx,
   readXLSX,
   writeCSV,
-} from "https://deno.land/x/flat@0.0.7/mod.ts";
+} from "https://deno.land/x/flat@0.0.8/mod.ts";
 
 const inputFilename = Deno.args[0];
 const outputFilename = inputFilename.replace(".xlsx", ".csv");
