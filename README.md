@@ -4,9 +4,17 @@ This demo is part of a larger Flat Data project created by Github Research. Read
 
 ## What this demo does
 
-This repository uses a [Flat Data Action](https://octo.github.com/blog/flat-data) to fetch a XLSX file from an http endpoint every 15 minutes.
+This repository uses a [Flat Data Action](https://octo.github.com/blog/flat-data) to fetch a XLSX file from an http endpoint every 15 minutes. Using a postprocessing script, Flat converts the XLSX file to a CSV file.
 
-Using a postprocessing script, Flat converts the XLSX file to a CSV file.
+Inside `.github/workflows/flat.yaml`:
+```yaml
+- name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://www.mobileconnectivityindex.com/widgets/connectivityIndex/excel/MCI_Data_2020.xlsx
+          downloaded_filename: countries_mobile_connectivity.xlsx # The http_url gets saved and renamed in our repository as this file
+          postprocess: ./postprocess.ts # A postprocessing javascript or typescript file written in Deno
+```
 
 ## Postprocessing
 
