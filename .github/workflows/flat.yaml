@@ -1,11 +1,11 @@
 name: flat
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/15 * * * *" # runs every 15 minutes
   workflow_dispatch: {}
   push:
     paths:
-      - .github/workflows/flat.yml
+      - .github/workflows/flat.yml # Only run a new workflow every time this file (flat.yaml) file changes
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -18,5 +18,5 @@ jobs:
         uses: githubocto/flat@v2
         with:
           http_url: https://www.mobileconnectivityindex.com/widgets/connectivityIndex/excel/MCI_Data_2020.xlsx
-          downloaded_filename: countries_mobile_connectivity.xlsx
-          postprocess: ./postprocess.ts
+          downloaded_filename: countries_mobile_connectivity.xlsx # The http_url gets saved and renamed in our repository as this file
+          postprocess: ./postprocess.ts # A postprocessing javascript or typescript file written in Deno
