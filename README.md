@@ -12,7 +12,7 @@ Inside `.github/workflows/flat.yaml`:
         uses: githubocto/flat@v2
         with:
           http_url: https://www.mobileconnectivityindex.com/widgets/connectivityIndex/excel/MCI_Data_2020.xlsx
-          downloaded_filename: countries_mobile_connectivity.xlsx # The http_url gets saved and renamed in our repository as this file
+          downloaded_filename: mobile_connectivity.xlsx # The http_url gets saved and renamed in our repository as this file
           postprocess: ./postprocess.ts # A postprocessing javascript or typescript file written in Deno
 ```
 
