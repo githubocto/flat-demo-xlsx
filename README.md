@@ -16,6 +16,8 @@ Inside `.github/workflows/flat.yaml`:
           postprocess: ./postprocess.ts # A postprocessing javascript or typescript file written in Deno
 ```
 
+<img src="https://raw.githubusercontent.com/githubocto/flat-demo-xlsx/readme-assets/assets/diagram.png" alt="diagram" width="400"/>
+
 ## Postprocessing
 
 Refer to the [Flat postprocessing library](https://github.com/githubocto/flat-postprocessing) for more helper functions and examples for writing postprocessing scripts.
