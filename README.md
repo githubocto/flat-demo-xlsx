@@ -9,7 +9,7 @@ This repository uses a [Flat Data Action](https://octo.github.com/blog/flat-data
 Inside `.github/workflows/flat.yaml`:
 ```yaml
 - name: Fetch data
-        uses: githubocto/flat@v2
+        uses: githubocto/flat@v3
         with:
           http_url: https://www.mobileconnectivityindex.com/widgets/connectivityIndex/excel/MCI_Data_2020.xlsx
           downloaded_filename: mobile-connectivity.xlsx # The http_url gets saved and renamed in our repository as this file
