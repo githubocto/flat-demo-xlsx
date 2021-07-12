@@ -4,7 +4,7 @@ This demo is part of a larger Flat Data project created by [GitHub OCTO](https:/
 
 ## What this demo does
 
-This repository uses a [Flat Data Action](https://octo.github.com/blog/flat-data) to fetch a XLSX file from an http endpoint every 15 minutes. Using a postprocessing script, Flat converts the XLSX file to a CSV file.
+This repository uses a [Flat Data Action](https://github.com/githubocto/flat) to fetch a XLSX file from an http endpoint every 15 minutes. Using a postprocessing script, Flat converts the XLSX file to a CSV file.
 
 Inside `.github/workflows/flat.yaml`:
 ```yaml
